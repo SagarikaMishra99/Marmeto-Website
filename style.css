@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
+:root{
+    --main-color: green;
+    --white:#fff;
+    --bg:#dfc0da;
+    --border:.1rem solid rgba(255,255,255,.3);
+}
+*{
+    font-family: 'Roboto' , sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: transparent;
+    border-radius: 5rem;
+}
+
+body{
+    background: var(--bg);
+}
+.header{
+    background:var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+.header.logo img{
+    height: 1rem;
+    width: 0;
+}
+.logo img {
+    max-width: 100px; /* Adjust the width as needed */
+    height: auto;     /* Maintain aspect ratio */
+    object-fit: contain; /* Ensure the image fits within its container */
+}
+
+.header .navbar a{
+    margin: 0 1rem;
+    font-size: 3.6rem;
+    color: #120101;
+    
+}
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.icons{
+    margin-left: 2rem;
+    justify-content: space-between;
+}
+.header .icons{
+    color: #120101;
+    cursor: pointer;
+    font-size: 3rem;
+    margin-left: 2rem;
+   
+}
+.header .icons i:hover{
+    color:var(--main-color)
+}
+/* Background image container */
+.background-img {
+    width: 100%;
+    height: 400px; /* Adjust as needed */
+    position: relative; /* Position relative for overlay */
+    overflow: hidden; /* Prevent content overflow */
+}
+
+.background-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container */
+    object-position: center; /* Centers the image */
+}
+
+/* Overlay text styling */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    bottom: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust for true center */
+    text-align: center;
+    color: #fff; /* White text for contrast */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add a shadow for better readability */
+}
+
+.overlay-text h1 {
+    font-size: 36px; /* Main heading size */
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.overlay-text p {
+    font-size: 18px; /* Subtext size */
+    margin-top: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .background-img {
+        height: 300px; /* Smaller height for small screens */
+    }
+
+    .overlay-text h1 {
+        font-size: 28px; /* Adjust font size for smaller screens */
+    }
+
+    .overlay-text p {
+        font-size: 16px;
+    }
+}
+
+
+
+.background-img img {
+    width: 100%; /* Make the image span the full width of the div */
+    height: 500px; /* Make the image span the full height of the div */
+    object-fit: cover; /* Ensures the image covers the entire div without distortion */
+    object-position: center; /* Center the image */
+}
+/* Cart Items Table */
+    .cart-items table {
+      width: 50%;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: 10%;
+      margin-right: 10% ;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-items table th
+     {
+
+     justify-content: space-between;
+     font-size: 20px;
+     text-align: center;
+     padding: 1rem;
+     height: 50px;
+     border-bottom: 1px solid #ddd;
+    }
+
+    .cart-items table th {
+      background: #f4f4f4;
+    }
+    .cart-container {
+        max-width: 1200px;
+        max-height: 80%;
+        margin: 20px auto;
+        background: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .cart-items {
+        flex: 2;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px;
+        border-top: 1px solid #ddd;
+    }
+    .cart-item:last-child {
+        border-bottom: none;
+    }
+    .item-details {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex: 2;
+    }
+    .item-details img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+    .item-quantity {
+        flex: 1;
+        text-align: center;
+    }
+    .item-quantity input {
+        width: 50px;
+        text-align: center;
+    }
+    .item-price {
+        flex: 1;
+        text-align: right;
+    }
+    .cart-totals {
+        flex: 1;
+        margin-bottom: 80px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+    .cart-totals h3 {
+        margin-bottom: 15px;
+        font-size: 1.2em;
+    }
+    .cart-totals .subtotal, .cart-totals .total {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+    .checkout-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #28a745;
+        color: #fff;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .remove-item {
+        color: red;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+     /* Footer */
+     footer {
+        background: pink;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    .footer-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+    
+    .footer-info div {
+        text-align: center;
+        flex: 1;
+        max-width: 200px;
+    }
+    
+    .footer-info i {
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+    
+    .footer-info p {
+        margin-top: 5px;
+        font-size: 14px;
+        color: #666;
+    }
+    
+      @media (max-width: 768px) {
+        .cart-container {
+            flex-direction: column;
+        }
+    }
+      
+   

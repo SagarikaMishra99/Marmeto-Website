@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--header section     -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="Logo (1).png">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <i class="fa-sharp fa-solid fa-heart"></i>
+
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+
+
+    </header>
+    <div class="background-img">
+        <img src="blog5.jpg">
+        <div class="overlay-text">
+            <h1>Marmeto <p></p>Cart</h1>
+            <p>Home <i class="fa-solid fa-greater-than"></i> Cart</p>
+        </div>
+    </div>
+    <section class="cart-items">
+        <table>
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+
+               
+            
+             
+          
+        </table>
+  </section>
+     <!-- Cart Table -->
+     <div class="cart-container">
+    
+      
+        <ul class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically loaded here -->
+       </ul>
+        
+        <div class="cart-totals">
+            <h3>Cart Totals</h3>
+            <div class="subtotal"><span>Subtotal:</span> <span id="cart-subtotal">$0.00</span></div>
+            <div class="total"><span>Total:</span> <span id="cart-total">$0.00</span></div>
+            <a href="#" class="checkout-btn" id="checkout-btn"> Check out</a>
+        </div>
+ </div>
+
+     <!-- Footer -->
+     <footer>
+        <div class="footer-info">
+            <div>
+                <i class="fa-solid fa-trophy"></i>
+                <div>
+                    <span>High Quality</span>
+                    <p>Crafted from top materials</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-lock"></i>
+                <div>
+                    <span>Warranty Protection</span>
+                    <p>Over 2 years</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-duotone fa-solid fa-truck-fast"></i>
+                <div>
+                    <span>Free Shipping</span>
+                    <p>Order over $150</p>
+                </div>
+            </div>
+            <div>
+                <i class="fa-sharp fa-solid fa-phone"></i>
+                <div>
+                    <span>24/7 Support</span>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
+    
+ <script src="script.js"></script>
+</body>
+</html>
